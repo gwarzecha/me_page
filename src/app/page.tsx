@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-indigo-950 text-indigo-300">
-      <div className="container mx-auto">
-        <div className="flex flex-col gap-2">
+    <main className="bg-minsk-950 text-minsk-400 flex min-h-screen flex-col items-center justify-center">
+      <div className="container">
+        <div className="flex flex-col space-y-3">
           <span>Hey there,</span>
           <span>My name is Garrett Warzecha</span>
           <span>
