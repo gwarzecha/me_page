@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        // sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        sans: "helvetica",
       },
       colors: {
         minsk: {
@@ -25,15 +26,15 @@ export default {
       },
     },
     // Might need to get rid of this when the nav and header are in place
-    container: {
-      padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "6rem",
-      },
-    },
+    // container: {
+    //   padding: {
+    //     DEFAULT: "1rem",
+    //     sm: "2rem",
+    //     lg: "4rem",
+    //     xl: "5rem",
+    //     "2xl": "6rem",
+    //   },
+    // },
   },
   plugins: [],
 } satisfies Config;

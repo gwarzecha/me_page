@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LaptopSVG from "../images/laptop.svg";
 
 export default function HomePage() {
   return (
@@ -57,17 +58,22 @@ export default function HomePage() {
             </svg>
           </a>
         </nav>
-        <section className="flex-grow bg-minsk-950 text-minsk-400">
-          <div className="container mx-auto p-4">
-            <div className="flex flex-col space-y-3">
-              <span>Hey there,</span>
-              <span>My name is Garrett Warzecha</span>
-              <span>
-                I am a Software Engineer from Phoenix. I love learning about
-                computers/engineering/development, applying what I learn, and
-                reading about the history of tech, exciting current trends, and
-                its future.
-              </span>
+        <section className="flex flex-grow items-center justify-center bg-minsk-950 text-minsk-400">
+          <div className="container mx-auto px-4 py-8">
+            <div className="mx-auto flex flex-col items-center gap-6 sm:flex-row">
+              <div className="mx-auto flex w-full max-w-[50rem] flex-col gap-3 sm:w-1/2">
+                <span>Hey there,</span>
+                <span>My name is Garrett Warzecha</span>
+                <span>
+                  I am a Software Engineer from Phoenix. I love learning about
+                  computers/engineering/development, applying what I learn, and
+                  reading about the history of tech, exciting current trends,
+                  and its future.
+                </span>
+              </div>
+              <div className="w-full sm:w-1/2">
+                <LaptopSVG className="hidden h-80 w-80 max-w-[50rem] sm:block" />
+              </div>
             </div>
           </div>
         </section>
