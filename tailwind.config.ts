@@ -6,8 +6,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // sans: ["var(--font-geist-sans)", ...fontFamily.sans],
-        sans: "helvetica",
+        sourcecode: ["var(--font-sourcecode)", "monospace"],
+        firacode: ["var(--font-firacode)", "monospace"],
+        inconsolata: ["var(--font-inconsolata)", "monospace"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
       colors: {
         minsk: {

@@ -62,9 +62,11 @@ export default function HomePage() {
           <div className="container mx-auto px-4 py-8">
             <div className="mx-auto flex flex-col items-center gap-6 sm:flex-row">
               <div className="mx-auto flex w-full max-w-[50rem] flex-col gap-3 sm:w-1/2">
-                <span>Hey there,</span>
-                <span>My name is Garrett Warzecha</span>
-                <span>
+                <span className="font-sourcecode text-base">Hey there,</span>
+                <span className="font-firacode mb-4 text-4xl">
+                  My name is Garrett Warzecha
+                </span>
+                <span className="font-inconsolata text-lg">
                   I am a Software Engineer from Phoenix. I love learning about
                   computers/engineering/development, applying what I learn, and
                   reading about the history of tech, exciting current trends,
