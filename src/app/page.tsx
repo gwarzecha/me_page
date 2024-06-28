@@ -1,64 +1,50 @@
-import Link from "next/link";
+"use client";
 import LaptopSVG from "../images/laptop.svg";
 
 export default function HomePage() {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href")?.slice(1);
+    if (targetId) {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
-    <main className="flex h-screen w-screen flex-col">
-      <header className="flex w-full items-end justify-center bg-minsk-950 text-minsk-400 sm:h-1/6 sm:w-full">
-        Header
-      </header>
-      <div className="flex w-full flex-grow flex-col sm:flex-row">
-        <nav className="hidden bg-minsk-950 text-minsk-400  sm:flex sm:w-1/6 sm:flex-col sm:items-center">
-          <a href="#link1" className="p-2">
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M3 12l2-2 4 4 8-8 2 2m0 0l-2 2m2-2l-2 2"
-              />
-            </svg>
+    <main className="flex h-screen w-screen flex-col bg-minsk-950">
+      <nav className="fixed w-full bg-minsk-950 text-minsk-400 sm:h-1/6 sm:w-full">
+        <div className="container mx-auto flex h-full items-center justify-center space-x-11">
+          <a
+            href="#about"
+            onClick={handleScroll}
+            className="font-sourcecode text-minsk-300"
+          >
+            About
           </a>
-          <a href="#link2" className="p-2">
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 10V3L4 14h7v7l9-11h-7z"
-              />
-            </svg>
+          <a
+            href="#projects"
+            onClick={handleScroll}
+            className="font-sourcecode text-minsk-300"
+          >
+            Projects
           </a>
-          <a href="#link3" className="p-2">
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 10l4.94 4.94-4.94 4.94M5 10l4.94 4.94L5 20.88"
-              />
-            </svg>
+          <a
+            href="#contact"
+            onClick={handleScroll}
+            className="font-sourcecode text-minsk-300"
+          >
+            Contact me
           </a>
-        </nav>
-        <section className="flex flex-grow items-center justify-center bg-minsk-950 text-minsk-400">
+        </div>
+      </nav>
+      <div className="flex w-full flex-grow flex-col">
+        <section
+          id="about"
+          className="flex min-h-screen flex-col items-center justify-center bg-minsk-950 text-minsk-400"
+        >
           <div className="container mx-auto px-4 py-8">
             <div className="mx-auto flex flex-col items-center gap-6 sm:flex-row">
               <div className="mx-auto flex w-full max-w-[50rem] flex-col gap-3 sm:w-1/2">
@@ -67,7 +53,7 @@ export default function HomePage() {
                   My name is Garrett Warzecha
                 </span>
                 <span className="font-inconsolata text-lg">
-                  I am a Software Engineer from Phoenix. I love learning about
+                  I'm a Software Engineer from Phoenix. I love learning about
                   computers/engineering/development, applying what I learn, and
                   reading about the history of tech, exciting current trends,
                   and its future.
@@ -79,10 +65,26 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <section
+          id="projects"
+          className="flex min-h-screen flex-col items-center justify-center bg-minsk-950 text-minsk-400"
+        >
+          <div className="container mx-auto px-4 py-8">
+            <h2 className="font-firacode mb-4 text-4xl">Projects</h2>
+            <p className="font-inconsolata">Project details go here...</p>
+          </div>
+        </section>
+        <section
+          id="contact"
+          className="flex min-h-screen flex-col items-center justify-center bg-minsk-950 text-minsk-400"
+        >
+          <div className="container mx-auto px-4 py-8">
+            <h2 className="font-firacode mb-4 text-4xl">Contact</h2>
+            <p className="font-inconsolata">Contact information goes here...</p>
+          </div>
+        </section>
       </div>
-      <footer className="flex w-full items-center justify-center bg-minsk-950 text-minsk-400 sm:h-1/6 sm:w-full">
-        Footer
-      </footer>
+      <footer className="flex w-full items-center justify-center bg-minsk-950 text-minsk-400 sm:h-1/6 sm:w-full"></footer>
     </main>
   );
 }
