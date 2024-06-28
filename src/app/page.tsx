@@ -1,5 +1,8 @@
 "use client";
 import LaptopSVG from "../images/laptop.svg";
+import GithubLogoSVG from "../images/githublogo.svg";
+import LinkedInLogoSVG from "../images/linkedin.svg";
+import EmailSVG from "../images/email.svg";
 
 export default function HomePage() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -8,7 +11,14 @@ export default function HomePage() {
     if (targetId) {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
+        if (targetId === "contact") {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+          });
+        } else {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
       }
     }
   };
@@ -43,9 +53,9 @@ export default function HomePage() {
       <div className="flex w-full flex-grow flex-col">
         <section
           id="about"
-          className="flex min-h-screen flex-col items-center justify-center bg-minsk-950 text-minsk-400"
+          className="flex min-h-screen flex-col items-center justify-center bg-minsk-950  text-minsk-400"
         >
-          <div className="container mx-auto px-4 py-8">
+          <div className="container mx-auto ">
             <div className="mx-auto flex flex-col items-center gap-6 sm:flex-row">
               <div className="mx-auto flex w-full max-w-[50rem] flex-col gap-3 sm:w-1/2">
                 <span className="font-sourcecode text-base">Hey there,</span>
@@ -84,7 +94,25 @@ export default function HomePage() {
           </div>
         </section>
       </div>
-      <footer className="flex w-full items-center justify-center bg-minsk-950 text-minsk-400 sm:h-1/6 sm:w-full"></footer>
+      <footer
+        id="footer"
+        className="flex w-full items-center justify-center bg-minsk-950 p-4 text-minsk-400 sm:h-1/6 sm:w-full"
+      >
+        <div className="flex flex-row space-x-5">
+          <a href="https://github.com/gwarzecha" target="_blank">
+            <GithubLogoSVG className="h-8 w-8" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/garrett-warzecha/"
+            target="_blank"
+          >
+            <LinkedInLogoSVG className="h-8 w-8" />
+          </a>
+          <a href="mailto:gmwarzecha@tutanota.com" target="_blank">
+            <EmailSVG className="h-8 w-8" />
+          </a>
+        </div>
+      </footer>
     </main>
   );
 }
