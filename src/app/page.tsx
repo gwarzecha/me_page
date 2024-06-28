@@ -63,10 +63,10 @@ export default function HomePage() {
                   My name is Garrett Warzecha
                 </span>
                 <span className="font-inconsolata text-lg">
-                  I'm a Software Engineer from Phoenix. I love learning about
-                  computers/engineering/development, applying what I learn, and
-                  reading about the history of tech, exciting current trends,
-                  and its future.
+                  I&apos;m a Software Engineer from Phoenix. I love learning
+                  about computers/engineering/development, applying what I
+                  learn, and reading about the history of tech, exciting current
+                  trends, and its future.
                 </span>
               </div>
               <div className="w-full sm:w-1/2">
