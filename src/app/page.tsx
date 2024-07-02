@@ -25,7 +25,7 @@ export default function HomePage() {
 
   return (
     <main className="flex h-screen w-screen flex-col bg-minsk-950">
-      <nav className="fixed w-full bg-minsk-950 text-minsk-400 sm:h-1/6 sm:w-full">
+      <nav className="fixed w-full bg-minsk-950 py-6 text-minsk-400 sm:h-1/6 sm:w-full sm:py-0">
         <div className="container mx-auto flex h-full items-center justify-center space-x-11">
           <a
             href="#about"
