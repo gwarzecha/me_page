@@ -46,7 +46,7 @@ export default function RootLayout({
       lang="en"
       className={`${sourceCodePro.variable} ${firaCode.variable} ${inconsolata.variable} ${montserrat.variable}`}
     >
-      <body>{children}</body>
+      <body className="bg-minsk-950">{children}</body>
     </html>
   );
 }
