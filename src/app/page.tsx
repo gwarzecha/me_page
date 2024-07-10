@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <main className="flex h-screen w-screen flex-col bg-minsk-950">
       <nav className="fixed left-0 top-0 z-50 w-full bg-minsk-950 py-6 text-minsk-400 sm:h-1/6 sm:w-full sm:py-0">
-        <div className="container mx-auto flex h-full items-center justify-center space-x-11">
+        <div className="container mx-auto flex h-full items-center justify-center space-x-7">
           <a
             href="#about"
             onClick={handleScroll}
@@ -46,7 +46,14 @@ export default function HomePage() {
             onClick={handleScroll}
             className="font-sourcecode text-minsk-300"
           >
-            Contact me
+            Contact
+          </a>
+          <a
+            href="/2024_Resume.pdf"
+            target="_blank"
+            className="font-sourcecode text-minsk-300"
+          >
+            Resume
           </a>
         </div>
       </nav>
