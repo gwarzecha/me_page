@@ -25,13 +25,7 @@ export default function HomePage() {
 
   return (
     <main className="flex min-h-screen w-full flex-col bg-minsk-950">
-      <nav
-        className="fixed left-0 top-0 z-50 w-full bg-minsk-950 py-6 text-minsk-400 sm:h-1/6 sm:w-full sm:py-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, g-minsk-950 65%, transparent 100%)",
-        }}
-      >
+      <nav className="nav-gradient fixed left-0 top-0 z-50 w-full bg-minsk-950 py-6 text-minsk-400 sm:h-1/6 sm:w-full sm:py-0">
         <div className="container mx-auto flex h-full items-center justify-center space-x-7">
           <a
             href="#about"
