@@ -25,7 +25,7 @@ export default function HomePage() {
 
   return (
     <main className="flex h-screen w-screen flex-col bg-minsk-950">
-      <nav className="fixed w-full bg-minsk-950 py-6 text-minsk-400 sm:h-1/6 sm:w-full sm:py-0">
+      <nav className="fixed left-0 top-0 z-50 w-full bg-minsk-950 py-6 text-minsk-400 sm:h-1/6 sm:w-full sm:py-0">
         <div className="container mx-auto flex h-full items-center justify-center space-x-11">
           <a
             href="#about"
@@ -50,7 +50,7 @@ export default function HomePage() {
           </a>
         </div>
       </nav>
-      <div className="flex w-full flex-grow flex-col">
+      <div className="mt-[72px] flex w-full flex-grow flex-col sm:mt-0">
         <section
           id="about"
           className="flex min-h-screen flex-col items-center justify-center bg-minsk-950  text-minsk-400"
@@ -63,10 +63,11 @@ export default function HomePage() {
                   My name is Garrett Warzecha
                 </span>
                 <span className="font-inconsolata text-lg">
-                  I&apos;m a Software Engineer from Phoenix. I love learning
-                  about computers/engineering/development, applying what I
-                  learn, and reading about the history of tech, exciting current
-                  trends, and its future.
+                  I&apos;m a Software Engineer from Phoenix. My love of
+                  computers is rivaled only by my love of cats. As it relates to
+                  tech, I spend my time learning, building, and reading anything
+                  I can get my hands on about computers, engineering, and
+                  development.{" "}
                 </span>
               </div>
               <div className="w-full sm:w-1/2">
@@ -90,7 +91,12 @@ export default function HomePage() {
         >
           <div className="container mx-auto px-4 py-8">
             <h2 className="font-firacode mb-4 text-4xl">Contact</h2>
-            <p className="font-inconsolata">Contact information goes here...</p>
+            <p className="font-inconsolata pb-3">
+              Click the handy links below to get in touch, or:
+            </p>
+            <p className="font-inconsolata">gmwarzecha@tutanota.com</p>
+            <p className="font-inconsolata">LinkedIn- garrett-warzecha</p>
+            <p className="font-inconsolata">GitHub- gwarzecha</p>
           </div>
         </section>
       </div>
