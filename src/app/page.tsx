@@ -25,7 +25,7 @@ export default function HomePage() {
 
   return (
     <main className="flex min-h-screen w-full flex-col bg-minsk-950">
-      <nav className="nav-gradient fixed left-0 top-0 z-50 w-full bg-minsk-950 py-6 text-minsk-400 sm:h-1/6 sm:w-full sm:py-0">
+      <nav className="nav-gradient sm:h-1/12 fixed left-0 top-0 z-50 w-full bg-minsk-950 py-6 text-minsk-400 sm:w-full sm:py-8">
         <div className="container mx-auto flex h-full items-center justify-center space-x-7">
           <a
             href="#about"
@@ -57,14 +57,14 @@ export default function HomePage() {
           </a>
         </div>
       </nav>
-      <div className="mt-[72px] flex w-full flex-grow flex-col sm:mt-0">
+      <div className="mt-[20px] flex w-full flex-grow flex-col sm:mt-0">
         <section
           id="about"
           className="flex min-h-screen flex-col items-center justify-center bg-minsk-950  text-minsk-400"
         >
           <div className="container mx-auto ">
             <div className="mx-auto flex flex-col items-center gap-6 sm:flex-row">
-              <div className="mx-auto flex w-full max-w-[50rem] flex-col gap-3 sm:w-1/2">
+              <div className="mx-auto flex w-full max-w-[70rem] flex-col gap-3 sm:w-3/4">
                 <span className="font-sourcecode text-base">Hey there,</span>
                 <span className="font-firacode mb-4 text-4xl">
                   My name is Garrett Warzecha
@@ -76,9 +76,6 @@ export default function HomePage() {
                   I can get my hands on about computers, engineering, and
                   development.{" "}
                 </span>
-              </div>
-              <div className="w-full sm:w-1/2">
-                <LaptopSVG className="hidden h-80 w-80 max-w-[50rem] sm:block" />
               </div>
             </div>
           </div>
