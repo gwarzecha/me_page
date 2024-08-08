@@ -1,8 +1,20 @@
 "use client";
-import LaptopSVG from "../images/laptop.svg";
 import GithubLogoSVG from "../images/githublogo.svg";
 import LinkedInLogoSVG from "../images/linkedin.svg";
 import EmailSVG from "../images/email.svg";
+import Image from "next/image";
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  Scrollbar,
+  EffectCoverflow,
+} from "swiper/modules";
 
 export default function HomePage() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -11,14 +23,7 @@ export default function HomePage() {
     if (targetId) {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        if (targetId === "contact") {
-          window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth",
-          });
-        } else {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
+        targetElement.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
@@ -42,13 +47,6 @@ export default function HomePage() {
             Projects
           </a>
           <a
-            href="#contact"
-            onClick={handleScroll}
-            className="font-sourcecode text-minsk-300"
-          >
-            Contact
-          </a>
-          <a
             href="/2024_Resume.pdf"
             target="_blank"
             className="font-sourcecode text-minsk-300"
@@ -60,10 +58,10 @@ export default function HomePage() {
       <div className="mt-[20px] flex w-full flex-grow flex-col sm:mt-0">
         <section
           id="about"
-          className="flex min-h-screen flex-col items-center justify-center bg-minsk-950  text-minsk-400"
+          className="flex min-h-screen flex-col items-center justify-center bg-minsk-950 text-minsk-400"
         >
           <div className="container mx-auto ">
-            <div className="mx-auto flex flex-col items-center gap-6 sm:flex-row">
+            <div className="mx-auto flex flex-col items-center gap-6 ">
               <div className="mx-auto flex w-full max-w-[70rem] flex-col gap-3 sm:w-3/4">
                 <span className="font-sourcecode text-base">Hey there,</span>
                 <span className="font-firacode mb-4 text-4xl">
@@ -77,6 +75,22 @@ export default function HomePage() {
                   development.{" "}
                 </span>
               </div>
+              <div className="container mx-auto px-4 py-8">
+                <div className="flex flex-row justify-center space-x-5">
+                  <a href="https://github.com/gwarzecha" target="_blank">
+                    <GithubLogoSVG className="h-8 w-8" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/garrett-warzecha/"
+                    target="_blank"
+                  >
+                    <LinkedInLogoSVG className="h-8 w-8" />
+                  </a>
+                  <a href="mailto:gmwarzecha@tutanota.com" target="_blank">
+                    <EmailSVG className="h-8 w-8" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -85,44 +99,108 @@ export default function HomePage() {
           className="flex min-h-screen flex-col items-center justify-center bg-minsk-950 text-minsk-400"
         >
           <div className="container mx-auto px-4 py-8">
-            <h2 className="font-firacode mb-4 text-4xl">Projects</h2>
-            <p className="font-inconsolata">Project details go here...</p>
-          </div>
-        </section>
-        <section
-          id="contact"
-          className="flex min-h-screen flex-col items-center justify-center bg-minsk-950 text-minsk-400"
-        >
-          <div className="container mx-auto px-4 py-8">
-            <h2 className="font-firacode mb-4 text-4xl">Contact</h2>
-            <p className="font-inconsolata pb-3">
-              Click the handy links below to get in touch, or:
-            </p>
-            <p className="font-inconsolata">gmwarzecha@tutanota.com</p>
-            <p className="font-inconsolata">LinkedIn- garrett-warzecha</p>
-            <p className="font-inconsolata">GitHub- gwarzecha</p>
+            <h2 className="font-firacode pb-8 text-4xl">Things I've built</h2>
+            <div className="w-full max-w-7xl">
+              <Swiper
+                modules={[
+                  Navigation,
+                  Pagination,
+                  Autoplay,
+                  Scrollbar,
+                  EffectCoverflow,
+                ]}
+                navigation
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                autoplay={{ delay: 3000 }}
+                effect={"coverflow"}
+                spaceBetween={30}
+                slidesPerView={1}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                  },
+                }}
+                className="mySwiper"
+              >
+                <SwiperSlide className="flex items-center justify-center">
+                  <Link
+                    href="https://github.com/gwarzecha/listening_dashboard"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/images/spotify_app.png"
+                      alt="Spotify App"
+                      width={500}
+                      height={500}
+                      className="rounded-lg shadow-xl"
+                    />
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center">
+                  <Link
+                    href="https://github.com/gwarzecha/album_search_tool"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/images/python_album_tool.png"
+                      alt="Spotify App"
+                      width={500}
+                      height={500}
+                      className="rounded-lg shadow-xl"
+                    />
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center">
+                  <Image
+                    src="/images/spotify_app.png"
+                    alt="Spotify App"
+                    width={500}
+                    height={500}
+                    className="rounded-lg shadow-xl"
+                  />
+                </SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center">
+                  <Image
+                    src="/images/spotify_app.png"
+                    alt="Spotify App"
+                    width={500}
+                    height={500}
+                    className="rounded-lg shadow-xl"
+                  />
+                </SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center">
+                  <Image
+                    src="/images/spotify_app.png"
+                    alt="Spotify App"
+                    width={500}
+                    height={500}
+                    className="rounded-lg shadow-xl"
+                  />
+                </SwiperSlide>
+                <SwiperSlide className="flex items-center justify-center">
+                  <Image
+                    src="/images/spotify_app.png"
+                    alt="Spotify App"
+                    width={500}
+                    height={500}
+                    className="rounded-lg shadow-xl"
+                  />
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
         </section>
       </div>
-      <footer
-        id="footer"
-        className="flex w-full items-center justify-center bg-minsk-950 p-4 text-minsk-400 sm:h-1/6 sm:w-full"
-      >
-        <div className="flex flex-row space-x-5">
-          <a href="https://github.com/gwarzecha" target="_blank">
-            <GithubLogoSVG className="h-8 w-8" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/garrett-warzecha/"
-            target="_blank"
-          >
-            <LinkedInLogoSVG className="h-8 w-8" />
-          </a>
-          <a href="mailto:gmwarzecha@tutanota.com" target="_blank">
-            <EmailSVG className="h-8 w-8" />
-          </a>
-        </div>
-      </footer>
     </main>
   );
 }
