@@ -27,7 +27,7 @@ export default function HomePage() {
             Projects
           </a>
           <a
-            href="/2024_Resume.pdf"
+            href="/2024_Resume_updated.pdf"
             target="_blank"
             className="font-sourcecode text-minsk-300"
           >
@@ -44,7 +44,7 @@ export default function HomePage() {
             <div className="mx-auto flex flex-col items-center gap-6 ">
               <div className="mx-auto flex w-full max-w-[70rem] flex-col gap-3 sm:w-3/4">
                 <span className="font-sourcecode text-base">Hey there,</span>
-                <span className="font-firacode mb-4 text-4xl">
+                <span className="mb-4 font-firacode text-4xl">
                   My name is Garrett Warzecha
                 </span>
                 <span className="font-inconsolata text-lg">
