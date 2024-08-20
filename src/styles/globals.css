@@ -5,3 +5,11 @@
 .nav-gradient {
   background: linear-gradient(to bottom, #1e1c4a 65%, transparent 100%);
 }
+
+.icon-svg {
+  transition: transform 0.3s ease-out;
+}
+
+.icon-svg:hover {
+  transform: scale(1.2);
+}
