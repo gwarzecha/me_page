@@ -31,7 +31,7 @@ export default function HomePage() {
           </Fade>
           <Fade cascade>
             <a
-              href="/2024_Resume_updated.pdf"
+              href="/Current_Resume(08_24).pdf"
               target="_blank"
               className="font-sourcecode text-minsk-300 transition-colors duration-300 hover:text-gray-300"
             >
