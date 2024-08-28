@@ -32,8 +32,8 @@ const montserrat = Montserrat({
 
 export const metadata = {
   title: "Garrett's Portfolio",
-  description: "Portfolio and a little about me",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  description: "Personal portfolio site of Garrett Warzecha",
+  icons: [{ rel: "icon", url: "/favicon-32x32.png" }],
 };
 
 export default function RootLayout({
